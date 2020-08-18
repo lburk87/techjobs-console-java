@@ -88,13 +88,15 @@ public class JobData {
         loadData();
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
         for (int i = 0; i < allJobs.size(); i++) {
-            Collection<String> job = allJobs.get(i).values();
+            String job = new String(allJobs.get(i).values().toString().toLowerCase());
             if (job.contains(value)) {
                 jobs.add(allJobs.get(i));
             }
         }
         return jobs;
     }
+
+
 
 
 
