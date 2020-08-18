@@ -113,16 +113,25 @@ public class TechJobs {
 //    printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        Object[] jobKey = someJobs.get(0).keySet().toArray();
-        Object[] jobValue = someJobs.get(0).values().toArray();
-        Object[] jobsArray = someJobs.toArray();
-        System.out.println("*****");
 
-        for (int i=0; i< jobKey.length; i++) {
-            System.out.println(jobKey[i] + ": " + jobValue[i]);
+
+        for (int i = 0; (i < someJobs.size()); i++) {
+
+            System.out.println("*****");
+            Object[] jobKey = someJobs.get(i).keySet().toArray();
+            Object[] jobValue = someJobs.get(i).values().toArray();
+
+            for (int j = 0; (j < jobKey.length); j++) {
+
+                System.out.println(jobKey[j] + ": " + jobValue[j]);
+
+            }
+
+            System.out.println("*****");
+
         }
 
-        System.out.println("*****");
+
 
     }
 
